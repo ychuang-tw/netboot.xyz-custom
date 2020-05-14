@@ -11,6 +11,6 @@ item clonezilla Start CloneZilla
 :clonezilla
 imgfree
 set url http://dsm.lan/
-kernel ${url}vmlinuz boot=live username=user union=overlay config components quiet noswap edd=on nomodeset nodmraid locales="zh_TW.UTF-8" keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no net.ifnames=0 nosplash noprompt fetch=${url}filesystem.squashfs initrd=initrd
+kernel ${url}vmlinuz boot=live username=user union=overlay hostname=focal config components quiet noswap edd=on enforcing=0 nomodeset noeject nodmraid locales= keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no vga=791 toram=live net.ifnames=0 splash noprompt fetch=${url}filesystem.squashfs initrd=initrd
 initrd ${url}initrd.img
 boot
